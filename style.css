@@ -1,0 +1,249 @@
+/*
+Theme Name: WP Bootstrap Starter Child
+Theme URI: https://afterimagedesigns.com/wp-bootstrap-starter/
+Description: Child theme for WP Bootstrap Starter
+Author: Your Name
+Author URI: Your Website
+Template: wp-bootstrap-starter
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: wp-bootstrap-starter-child
+*/
+
+/* Import parent theme styles */
+@import url("../wp-bootstrap-starter/style.css");
+
+/* Add your custom styles below this line */
+
+/* Global styles */
+body {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+div#page {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Header and Navigation */
+
+
+#page-sub-header {
+    padding-top: 10rem;
+}
+
+header#masthead {
+    background-color: white;
+    color: black;
+
+    position: fixed;
+    z-index: 100;
+    width: 600px;
+}
+
+.site-header {
+    padding: 2rem 0;
+    position: relative;
+}
+
+.hamburger-menu {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #000000;
+    margin: 5px 0;
+    transition: 0.4s;
+}
+
+#menu-top-menu {
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+#menu-top-menu .nav-item {
+    margin-right: 0;
+}
+
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background-color: #ffffff;
+    z-index: 999;
+    transition: 0.5s;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.menu-overlay.active {
+    right: 0;
+}
+
+.menu-items {
+    padding: 80px 20px 20px;
+}
+
+.menu-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-items li {
+    margin: 15px 0;
+}
+
+.menu-items a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.menu-items a:hover {
+    opacity: 0.7;
+}
+
+/* Gallery Folders Section */
+.gallery-folders {
+    padding: 4rem 0;
+}
+
+.folders-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 2rem;
+    margin: 0 auto;
+}
+
+.folder-icon {
+    flex-basis: 28%;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.folder-icon:hover {
+    transform: translateY(-5px);
+}
+
+.folder-icon img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 1rem;
+    filter: grayscale(1);
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+.folder-icon a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.1rem;
+    display: block;
+}
+
+.gallery-item {
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    width: 100%;
+    margin-bottom: 70px;
+}
+
+/* About Section */
+.about-section {
+    padding: 4rem 0;
+    text-align: center;;
+}
+
+.about-content {
+    padding-top: 20px;
+}
+
+.about-image img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* Support and Contact Sections */
+
+.support-section {
+    text-align: center;
+}
+
+.support-section,
+.contact-section {
+    padding: 4rem 0;
+    border-top: 1px solid #000000;
+}
+
+.donation-links a {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.donation-links a:hover {
+    opacity: 0.8;
+}
+
+
+.contact-section {
+    text-align: center;
+}
+
+
+/* Single Folder page */
+
+
+.folder-children p {
+    padding-top:30px;
+    /*text-align: center;*/
+    color: #000;
+    font-size: 1.2rem;
+}
+
+/* Contact form */
+
+body .wpcf7-spinner {
+    display: block;
+}
+
+/* Responsive adjustments for gallery folders */
+@media (max-width: 768px) {
+    .folders-container {
+        gap: 1.5rem;
+    }
+    
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .about-image img {
+        max-width: 200px;
+    }
+} 
