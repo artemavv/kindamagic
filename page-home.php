@@ -108,7 +108,7 @@ get_header(); ?>
                         } ?>
                     </div>
 
-                    <div class="support-content" style="padding-bottom: 30px;">
+                    <div class="support-text" style="padding-bottom: 30px;">
                     <?php 
 
                         $support_content = get_custom_textbox_content('support');
@@ -119,7 +119,7 @@ get_header(); ?>
                         }  ?>
                     </div>
                     <div class="donation-links">
-                        <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=BC7NRW4RNQN2U" class="paypal-link">Support via PayPal</a>
+                        <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=97E5LTV4GH44E" class="paypal-link">Support via PayPal</a>
                         <a target="_blank" href="https://buy.stripe.com/test_5kQ8wH1KSeqb8TX3wZ6wE00" class="stripe-link">Support via Stripe</a>
                     </div>
                 </div>
@@ -132,9 +132,14 @@ get_header(); ?>
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <h2>Contact</h2>
+                    <div class="contact-image">
+                        <?php $contact_image = get_custom_textbox_image_url('contact');
+                        if (!empty($contact_image)) {
+                            echo '<img src="' . esc_url($contact_image) . '" alt="Contact">';
+                        } ?>
+                    </div>
 
-                    <div class="contact-content" style="padding-bottom: 30px;"> 
+                    <div class="contact-text" style="padding-bottom: 30px;"> 
                     <?php 
                         $contact_content = get_custom_textbox_content('contact');
                         if (!empty($contact_content)) {

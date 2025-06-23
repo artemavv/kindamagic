@@ -23,8 +23,17 @@ html body {
 }
 
 div#page {
-    max-width: 600px;
+    max-width: 1600px;
     margin: 0 auto;
+}
+
+body a:hover {
+    text-decoration: none;
+    color: wheat;
+}
+
+#content.site-content {
+    padding-bottom: 10px;
 }
 
 /* Header and Navigation */
@@ -123,6 +132,12 @@ header#masthead {
     opacity: 0.7;
 }
 
+/* My Art */
+
+.my-art-image {
+    text-align: center;
+}
+
 /* Gallery Folders Section */
 .gallery-folders {
     padding: 4rem 0;
@@ -178,13 +193,15 @@ header#masthead {
     text-align: center;;
 }
 
-.about-content {
+.about-text, .support-text, .contact-text {
     padding-top: 20px;
+    margin-top: 50px;font-size: 1.4em;
 }
 
-.about-image img {
+.about-image img, .support-image img, .contact-image img {
     max-width: 300px;
-    height: auto;
+    height: auto; 
+    margin-bottom:  40px;
 }
 
 /* Support and Contact Sections */
@@ -238,7 +255,8 @@ body .wpcf7-spinner {
 /* Footer */
 
 footer {
-    margin-bottom: 200px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
 /* Navigation highlighting */
@@ -290,10 +308,6 @@ footer {
     
     .about-content {
         flex-direction: column;
-    }
-    
-    .about-image img {
-        max-width: 200px;
     }
     
     .custom-content {
