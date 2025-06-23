@@ -56,14 +56,17 @@
         </div>
 	</header><!-- #masthead -->
     <?php if(is_front_page() && !get_theme_mod( 'header_banner_visibility' )): ?>
-        <div id="page-sub-header" <?php if(has_header_image()) { ?>style="background-image: url('<?php header_image(); ?>');" <?php } ?>>
+        <div id="page-sub-header">
             <div class="container">
+                <?php if(has_header_image()) { ?>
+                    <img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>">
+                <?php } ?>
                 <h1>
                     <?php
                     if(get_theme_mod( 'header_banner_title_setting' )){
                         echo esc_attr( get_theme_mod( 'header_banner_title_setting' ) );
                     }else{
-                        echo 'WordPress + Bootstrap';
+                        
                     }
                     ?>
                 </h1>

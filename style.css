@@ -17,7 +17,7 @@ Text Domain: wp-bootstrap-starter-child
 /* Add your custom styles below this line */
 
 /* Global styles */
-body {
+html body {
     background-color: #ffffff;
     color: #000000;
 }
@@ -188,7 +188,6 @@ header#masthead {
 .support-section,
 .contact-section {
     padding: 4rem 0;
-    border-top: 1px solid #000000;
 }
 
 .donation-links a {
@@ -228,22 +227,78 @@ body .wpcf7-spinner {
     display: block;
 }
 
-/* Responsive adjustments for gallery folders */
-@media (max-width: 768px) {
-    .folders-container {
-        gap: 1.5rem;
-    }
-    
+/* Footer */
+
+footer {
+    margin-bottom: 200px;
+}
+
+/* Navigation highlighting */
+.navbar-nav a.nav-link.nav-activated,
+.menu-items a.nav-link.nav-activated {
+    color: #000000;
+    font-weight: bold;
+    opacity: 1;
+}
+
+.navbar-nav a.nav-link.nav-activated:hover,
+.menu-items a.nav-link.nav-activated:hover {
+    opacity: 0.8;
+}
+
+/* Custom Content Sections */
+.custom-content-section {
+    padding: 4rem 0;
+    border-top: 1px solid #000000;
+}
+
+.custom-content {
+    text-align: center;
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+
+.custom-content p {
+    margin-bottom: 1.5rem;
+}
+
+.custom-content:last-child p {
+    margin-bottom: 0;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
+    /* Full-width header on small screens*/
+    header#masthead {
+        width: 100%;
+    }
+
+    /* Responsive adjustments for gallery folders */
+    .folders-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
     .about-content {
         flex-direction: column;
-        text-align: center;
     }
     
     .about-image img {
         max-width: 200px;
     }
+    
+    .custom-content {
+        font-size: 1.2em;
+    }
 } 
+
+
+/* Responsive Design */
+@media (max-width: 585px) {
+
+    /* Full-width header on small screens*/
+    header#masthead {
+        width: 100%;
+    }
+}
