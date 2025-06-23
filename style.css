@@ -34,13 +34,21 @@ div#page {
     padding-top: 10rem;
 }
 
+body .navbar-light .navbar-nav .nav-link {
+    color: black;
+    text-shadow: 2px 2px 3px #ffffff;
+}
+
 header#masthead {
-    background-color: white;
+    background-color: transparent;
     color: black;
 
     position: fixed;
     z-index: 100;
-    width: 600px;
+    
+    right: 0;
+    border: 0;
+    box-shadow: none;
 }
 
 .site-header {
