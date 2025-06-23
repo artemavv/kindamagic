@@ -154,9 +154,20 @@ get_header(); ?>
 </div>
 
 <script>
-jQuery(document).ready(function($) {
 
+    jQuery(document).ready(function($) {
+    // Hamburger menu toggle
+    $('.hamburger-menu').click(function() {
+        $('.menu-overlay').toggleClass('active');
+    });
 
+    // Close menu when clicking outside
+    $(document).click(function(event) {
+        if (!$(event.target).closest('.hamburger-menu, .menu-overlay').length) {
+            $('.menu-overlay').removeClass('active');
+        }
+    });
+/*
     // Scroll highlighting for navigation links
     function highlightNavOnScroll() {
         var scrollPosition = $(window).scrollTop();
@@ -217,6 +228,7 @@ jQuery(document).ready(function($) {
     $('.navbar-nav a, .menu-items a').each(function() {
         console.log('Link text: "' + $(this).text() + '", href: "' + $(this).attr('href') + '"');
     });
+    */
 });
 </script>
 

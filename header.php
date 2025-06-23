@@ -35,15 +35,20 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'wp-bootstrap-starter' ); ?></a>
     <?php if(!is_page_template( 'blank-page.php' ) && !is_page_template( 'blank-page-with-container.php' )): ?>
-	<header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
+        <header id="masthead" class="site-header navbar-static-top <?php echo wp_bootstrap_starter_bg_class(); ?>" role="banner">
         <div class="container">
+            <nav class="navbar navbar-expand-xl p-0">
+                
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <?php
                 wp_nav_menu(array(
                 'theme_location'    => 'primary',
                 'container'       => 'div',
                 'container_id'    => 'main-nav',
-                'container_class' => '',
+                'container_class' => 'collapse navbar-collapse justify-content-end',
                 'menu_id'         => false,
                 'menu_class'      => 'navbar-nav',
                 'depth'           => 3,
