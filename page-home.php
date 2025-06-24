@@ -79,16 +79,28 @@ get_header(); ?>
                                 echo '<img src="' . esc_url($about_image) . '" alt="About me">';
                             } ?>
                         </div>
-            
-                        <div class="about-text" style="margin-top: 50px;font-size: 1.4em;">
-                            <?php 
-                            $about_content = get_custom_textbox_content('about_me');
-                            if (!empty($about_content)) {
-                                echo wp_kses_post($about_content);
-                            } else {
-                                echo '<p>This text is not set. Please go to the dashboard and set the text in the "About Me" textbox.</p>';
-                            }
-                            ?>
+                        
+                        <div class="row" style="margin-top: 50px;">
+                            <div class="col-md-4">
+                                <div class="personal-image">
+                                    <?php $personal_image = get_custom_textbox_image_url('personal');
+                                    if (!empty($personal_image)) {
+                                        echo '<img src="' . esc_url($personal_image) . '" alt="Personal" style="max-width: 100%; height: auto;">';
+                                    } ?>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="about-text" style="font-size: 1.4em;">
+                                    <?php 
+                                    $about_content = get_custom_textbox_content('about_me');
+                                    if (!empty($about_content)) {
+                                        echo wp_kses_post($about_content);
+                                    } else {
+                                        echo '<p>This text is not set. Please go to the dashboard and set the text in the "About Me" textbox.</p>';
+                                    }
+                                    ?>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -119,8 +131,8 @@ get_header(); ?>
                         }  ?>
                     </div>
                     <div class="donation-links">
-                        <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=97E5LTV4GH44E" class="paypal-link">Support via PayPal</a>
-                        <a target="_blank" href="https://buy.stripe.com/test_5kQ8wH1KSeqb8TX3wZ6wE00" class="stripe-link">Support via Stripe</a>
+                        <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=97E5LTV4GH44E" class="paypal-link">PayPal</a>
+                        <a target="_blank" href="https://buy.stripe.com/test_5kQ8wH1KSeqb8TX3wZ6wE00" class="stripe-link">Card/Twint</a>
                     </div>
                 </div>
             </div>

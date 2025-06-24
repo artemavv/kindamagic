@@ -29,7 +29,6 @@ div#page {
 
 body a:hover {
     text-decoration: none;
-    color: wheat;
 }
 
 #content.site-content {
@@ -79,6 +78,23 @@ header#masthead {
     background-color: #000000;
     margin: 5px 0;
     transition: 0.4s;
+}
+
+.navbar-light .navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+html body .navbar-toggler.collapsed .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.3)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Hamburger to X transformation using SVG */
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23000' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 4L26 26M26 4L4 26'/%3e%3c/svg%3e") !important;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
 }
 
 #menu-top-menu {
@@ -162,7 +178,7 @@ header#masthead {
 }
 
 .folder-icon img {
-    width: 100px;
+    width: 250px;
     height: auto;
     margin-bottom: 1rem;
     filter: grayscale(1);
@@ -252,6 +268,11 @@ body .wpcf7-spinner {
     display: block;
 }
 
+.contact-form form label {
+    width: 60%;
+    min-width: 300px;
+}
+
 /* Footer */
 
 footer {
@@ -306,6 +327,18 @@ footer {
         align-items: center;
     }
     
+    /* Make folder icons larger on mobile */
+    .folder-icon {
+        flex-basis: 100%;
+        margin-bottom: 2rem;
+    }
+    
+    .folder-icon img {
+        width: 80vw;
+        max-width: 300px;
+        height: auto;
+    }
+    
     .about-content {
         flex-direction: column;
     }
@@ -322,5 +355,11 @@ footer {
     /* Full-width header on small screens*/
     header#masthead {
         width: 100%;
+    }
+    
+    /* Even larger images on very small screens */
+    .folder-icon img {
+        width: 90vw;
+        max-width: 350px;
     }
 }

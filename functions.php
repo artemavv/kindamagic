@@ -66,6 +66,12 @@ function get_custom_textboxes_config() {
             'label' => 'About me',
             'description' => 'Enter "About Me" text here'
         ),
+        'personal' => array(
+            'id' => 'personal_text',
+            'image_id' => 'personal_image',
+            'label' => 'Personal',
+            'description' => 'Enter "Personal" text here'
+        ),
         'support' => array(
             'id' => 'support_text',
             'image_id' => 'support_image',

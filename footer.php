@@ -18,9 +18,9 @@
 	<footer id="colophon" class="site-footer navbar-light" role="contentinfo">
 		<div class="container pt-3 pb-3">
             <div class="site-info">
-                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?>
-                <!-- <span class="sep"> | </span> -->
-                
+                &copy; <?php echo date('Y'); ?> <?php echo '<a href="'.home_url().'">'.get_bloginfo('name').'</a>'; ?> 
+                <span class="sep"> | </span> 
+                All rights reserved.
             </div><!-- close .site-info -->
 		</div>
 	</footer><!-- #colophon -->
