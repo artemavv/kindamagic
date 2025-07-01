@@ -31,15 +31,20 @@ body a:hover {
     text-decoration: none;
 }
 
+body.single-folder #content.site-content {
+    padding-top: 6%;
+}
+
 #content.site-content {
     padding-bottom: 10px;
+    padding-top: 0px;
 }
 
 /* Header and Navigation */
 
 
 #page-sub-header {
-    padding-top: 10rem;
+    padding-top: 10px;
 }
 
 body .navbar-light .navbar-nav .nav-link {
@@ -80,13 +85,28 @@ header#masthead {
     transition: 0.4s;
 }
 
+
+nav.navbar {
+    align-items: end;
+    text-align: end;
+}
+
+#main-nav {
+    justify-items: flex-end;
+}
+
 .navbar-light .navbar-toggler {
     border: none;
     outline: none;
+    background-color: transparent;
+}
+html body .navbar-toggler-icon {
+    width: 2.5em;
+    height: 2.5em;
 }
 
 html body .navbar-toggler.collapsed .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.3)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Hamburger to X transformation using SVG */
@@ -98,9 +118,16 @@ html body .navbar-toggler.collapsed .navbar-toggler-icon {
 }
 
 #menu-top-menu {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     font-weight: bold;
+
+    background-color: transparent;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    font-size: 14px;
+    width: 150px;
 }
 
 #menu-top-menu .nav-item {
@@ -142,6 +169,10 @@ html body .navbar-toggler.collapsed .navbar-toggler-icon {
     text-decoration: none;
     font-size: 1.2rem;
     transition: 0.3s;
+}
+
+#masthead .navbar-nav > li > a {
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 .menu-items a:hover {
@@ -209,15 +240,26 @@ html body .navbar-toggler.collapsed .navbar-toggler-icon {
     text-align: center;;
 }
 
-.about-text, .support-text, .contact-text {
+.about-text {
+    text-align: left;
+    font-size: 1.4em;
+}
+
+.about-content .about-text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.support-text, .contact-text {
     padding-top: 20px;
     margin-top: 50px;font-size: 1.4em;
 }
 
 .about-image img, .support-image img, .contact-image img {
     max-width: 300px;
-    height: auto; 
-    margin-bottom:  40px;
+    height: auto;   
 }
 
 /* Support and Contact Sections */
@@ -228,7 +270,7 @@ html body .navbar-toggler.collapsed .navbar-toggler-icon {
 
 .support-section,
 .contact-section {
-    padding: 4rem 0;
+    padding: 2rem 0;
 }
 
 .donation-links a {
@@ -244,6 +286,7 @@ html body .navbar-toggler.collapsed .navbar-toggler-icon {
 
 .donation-links a:hover {
     opacity: 0.8;
+    color: rgb(152, 255, 229);
 }
 
 
@@ -254,6 +297,13 @@ html body .navbar-toggler.collapsed .navbar-toggler-icon {
 
 /* Single Folder page */
 
+body.single-folder h1{
+    text-align: center;
+}
+
+ul.folder-children {
+    padding-left: 0px;
+}
 
 .folder-children p {
     padding-top:30px;
@@ -334,7 +384,7 @@ footer {
     }
     
     .folder-icon img {
-        width: 80vw;
+        width: 80%;
         max-width: 300px;
         height: auto;
     }
@@ -345,6 +395,15 @@ footer {
     
     .custom-content {
         font-size: 1.2em;
+    }
+
+    .about-text {
+        padding-top:30px;
+    }
+
+    .personal-image {
+        max-width: 300px;
+        margin: 0 auto;
     }
 } 
 
@@ -359,7 +418,7 @@ footer {
     
     /* Even larger images on very small screens */
     .folder-icon img {
-        width: 90vw;
+        width: 90%;
         max-width: 350px;
     }
 }

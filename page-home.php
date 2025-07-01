@@ -44,7 +44,7 @@ get_header(); ?>
                 
                 if ($folder_query->have_posts()) :
                     while ($folder_query->have_posts()) : $folder_query->the_post();
-                        $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'thumbnail');
+                        $thumbnail = get_the_post_thumbnail_url(get_the_ID(), 'full');
                         if (!$thumbnail) {
                             $thumbnail = get_stylesheet_directory_uri() . '/assets/images/folder.png';
                         }
@@ -81,7 +81,7 @@ get_header(); ?>
                         </div>
                         
                         <div class="row" style="margin-top: 50px;">
-                            <div class="col-md-4">
+                            <div class="col-md-6">
                                 <div class="personal-image">
                                     <?php $personal_image = get_custom_textbox_image_url('personal');
                                     if (!empty($personal_image)) {
@@ -89,8 +89,8 @@ get_header(); ?>
                                     } ?>
                                 </div>
                             </div>
-                            <div class="col-md-8">
-                                <div class="about-text" style="font-size: 1.4em;">
+                            <div class="about-text-container col-md-6">
+                                <div class="about-text">
                                     <?php 
                                     $about_content = get_custom_textbox_content('about_me');
                                     if (!empty($about_content)) {
