@@ -41,6 +41,11 @@
         <div class="container">
             <nav class="navbar p-0">
                 
+
+                <button class="navbar-toggler ml-auto collapsed" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
                 <?php
                 wp_nav_menu(array(
                 'theme_location'    => 'primary',
@@ -55,9 +60,6 @@
                 ));
                 ?>
 
-                <button class="navbar-toggler ml-auto collapsed" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
             </nav>
         </div>
@@ -66,7 +68,7 @@
         <div id="page-sub-header">
             <div class="container">
                 <?php if(has_header_image()) { ?>
-                    <img src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>">
+                    <img style="max-width:300px;" src="<?php header_image(); ?>" alt="<?php bloginfo('name'); ?>">
                 <?php } ?>
                 <h1>
                     <?php

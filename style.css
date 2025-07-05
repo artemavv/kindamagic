@@ -270,7 +270,7 @@ html body .navbar-toggler.collapsed .navbar-toggler-icon {
 
 .support-section,
 .contact-section {
-    padding: 2rem 0;
+    padding: 5rem 0;
 }
 
 .donation-links a {
@@ -321,6 +321,9 @@ body .wpcf7-spinner {
 .contact-form form label {
     width: 60%;
     min-width: 300px;
+}
+input.wpcf7-submit {
+  border-radius: 5px;
 }
 
 /* Footer */

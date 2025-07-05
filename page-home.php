@@ -10,11 +10,11 @@ get_header(); ?>
    
 
     <!-- Gallery Folders Section -->
-    <section id="my-art" class="gallery-folders">
+    <section id="my-art" class="gallery-folders" style="padding:2rem 0;" >
         <div class="my-art-image">
             <?php $my_art_image = get_custom_textbox_image_url('my_art');
             if (!empty($my_art_image)) {
-                echo '<img src="' . esc_url($my_art_image) . '" alt="My Art">';
+                echo '<img style="max-width:300px;" src="' . esc_url($my_art_image) . '" alt="My Art">';
             } ?>
         </div>
 
